@@ -31,8 +31,8 @@ public class PlayerMover : MonoBehaviour
     {
         _xRotation += Input.GetAxis(MouseX) * _rotationSpeedX;
         _yRotation += Input.GetAxis(MouseY) * _rotationSpeedY * -1;
-
         _yRotation = Mathf.Clamp(_yRotation, _minY, _maxY);
+
         transform.Rotate(0, Input.GetAxis(MouseX) * _rotationSpeedX, 0);
         _camera.transform.rotation = Quaternion.Euler(_yRotation, _xRotation, 0);
     }
