@@ -17,11 +17,15 @@ public class PlayerMover : MonoBehaviour
     private const string MouseX = "Mouse X";
     private const string MouseY = "Mouse Y";
 
-    private void Start()
+    private void Awake()
     {
         _camera = GetComponentInChildren<Camera>();
         _rigidBody = GetComponent<Rigidbody>();
-        _yRotation = 20f;
+    }
+
+    private void Start()
+    {
+        _yRotation = 50f;
     }
 
     public void Move()
