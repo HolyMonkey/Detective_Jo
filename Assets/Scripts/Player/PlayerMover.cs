@@ -10,7 +10,7 @@ public class PlayerMover : MonoBehaviour
 
     private float _xRotation;
     private float _yRotation;
-    private Vector3 _direction;
+    private Vector3 _targetPosition;
     private Camera _camera;
     private Rigidbody _rigidBody;
 
@@ -21,14 +21,13 @@ public class PlayerMover : MonoBehaviour
     {
         _camera = GetComponentInChildren<Camera>();
         _rigidBody = GetComponent<Rigidbody>();
-        _direction = new Vector3(Input.GetAxis(MouseX), 0, 0);
         _yRotation = 20f;
     }
 
     public void Move()
     {
-        //transform.Translate(_moveSpeed * Time.deltaTime * Vector3.forward);
-        _rigidBody.velocity = _direction;
+        _targetPosition = transform.position + (transform.forward * _moveSpeed * Time.deltaTime);
+        _rigidBody.MovePosition(_targetPosition);
         
         Rotate();
     }
@@ -39,7 +38,7 @@ public class PlayerMover : MonoBehaviour
         _yRotation += Input.GetAxis(MouseY) * _rotationSpeedY * -1;
         _yRotation = Mathf.Clamp(_yRotation, _minY, _maxY);
 
-        //transform.Rotate(0, Input.GetAxis(MouseX) * _rotationSpeedX, 0);
+        transform.Rotate(0, Input.GetAxis(MouseX) * _rotationSpeedX, 0);
         _camera.transform.rotation = Quaternion.Euler(_yRotation, _xRotation, 0);
     }
 }

@@ -18,11 +18,11 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             _payerMover.Move();
-            //_shaker.Begin();
+            _shaker.Begin();
         }
         else
         {
-            //_shaker.End();
+            _shaker.End();
         }
     }
 }
