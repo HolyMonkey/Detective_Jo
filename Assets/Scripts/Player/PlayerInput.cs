@@ -13,16 +13,16 @@ public class PlayerInput : MonoBehaviour
         _shaker = GetComponentInChildren<CameraShaker>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Input.GetMouseButton(0))
         {
             _payerMover.Move();
-            _shaker.Begin();
+            //_shaker.Begin();
         }
         else
         {
-            _shaker.End();
+            //_shaker.End();
         }
     }
 }
