@@ -8,7 +8,6 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private float _minY;
     [SerializeField] private float _maxY;
 
-    private float _xRotation;
     private float _yRotation;
     private Vector3 _targetPosition;
     private Camera _camera;
@@ -17,15 +16,11 @@ public class PlayerMover : MonoBehaviour
     private const string MouseX = "Mouse X";
     private const string MouseY = "Mouse Y";
 
-    private void Awake()
-    {
-        _camera = GetComponentInChildren<Camera>();
-        _rigidBody = GetComponent<Rigidbody>();
-    }
-
     private void Start()
     {
         _yRotation = 50f;
+        _camera = GetComponentInChildren<Camera>();
+        _rigidBody = GetComponent<Rigidbody>();
     }
 
     public void Move()
@@ -38,11 +33,10 @@ public class PlayerMover : MonoBehaviour
 
     private void Rotate()
     {
-        _xRotation += Input.GetAxis(MouseX) * _rotationSpeedX;
         _yRotation += Input.GetAxis(MouseY) * _rotationSpeedY * -1;
         _yRotation = Mathf.Clamp(_yRotation, _minY, _maxY);
 
         transform.Rotate(0, Input.GetAxis(MouseX) * _rotationSpeedX, 0);
-        _camera.transform.rotation = Quaternion.Euler(_yRotation, _xRotation, 0);
+        _camera.transform.localRotation = Quaternion.Euler(_yRotation, 0, 0);
     }
 }
