@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMover : MonoBehaviour
@@ -12,6 +13,7 @@ public class PlayerMover : MonoBehaviour
     private Vector3 _targetPosition;
     private Camera _camera;
     private Rigidbody _rigidBody;
+    private bool _canMove;
 
     private const string MouseX = "Mouse X";
     private const string MouseY = "Mouse Y";
@@ -21,14 +23,25 @@ public class PlayerMover : MonoBehaviour
         _yRotation = 50f;
         _camera = GetComponentInChildren<Camera>();
         _rigidBody = GetComponent<Rigidbody>();
+        _canMove = true;
     }
 
     public void Move()
     {
-        _targetPosition = transform.position + (transform.forward * _moveSpeed * Time.deltaTime);
-        _rigidBody.MovePosition(_targetPosition);
-        
-        Rotate();
+        if (_canMove)
+        {
+            _targetPosition = transform.position + (transform.forward * _moveSpeed * Time.deltaTime);
+            _rigidBody.MovePosition(_targetPosition);
+
+            Rotate();
+        }
+    }
+
+    public void StopMoving()
+    {
+        _canMove = false;
+
+        StartCoroutine(Counting());
     }
 
     private void Rotate()
@@ -38,5 +51,12 @@ public class PlayerMover : MonoBehaviour
 
         transform.Rotate(0, Input.GetAxis(MouseX) * _rotationSpeedX, 0);
         _camera.transform.localRotation = Quaternion.Euler(_yRotation, 0, 0);
+    }
+
+    private IEnumerator Counting()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        _canMove = true;
     }
 }

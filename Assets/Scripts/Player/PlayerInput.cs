@@ -6,28 +6,34 @@ public class PlayerInput : MonoBehaviour
 {
     private PlayerMover _payerMover;
     private CameraShaker _shaker;
+    private RaycastHandler _raycastHandler;
+    private float _timer;
 
     private void Start()
     {
         _payerMover = GetComponent<PlayerMover>();
         _shaker = GetComponentInChildren<CameraShaker>();
+        _raycastHandler = GetComponentInChildren<RaycastHandler>();
+        _timer = 0;
     }
 
     private void FixedUpdate()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Input.GetMouseButton(0) && Physics.Raycast(ray, out RaycastHit hit))
+        if (Input.GetMouseButtonDown(0) && _raycastHandler.IsPickableHit())
         {
-            if (!hit.collider.gameObject.GetComponent<Pickable>())
+            _payerMover.StopMoving();
+        }
+        else
+        {
+            if (Input.GetMouseButton(0))
             {
                 _payerMover.Move();
                 _shaker.Begin();
             }
-        }
-        else
-        {
-            _shaker.End();
+            else
+            {
+                _shaker.End();
+            }
         }
     }
 }
