@@ -8,6 +8,7 @@ public class Suspect : MonoBehaviour, IDamagable
     [SerializeField] private SusAnimator _susAnimator;
     [SerializeField] private int _maxHealth;
     [SerializeField] private DeathHandler _deathHandler;
+    [SerializeField] private VoiceLineHandler _voiceLineHandler;
 
     private Health _health;
 
@@ -28,7 +29,8 @@ public class Suspect : MonoBehaviour, IDamagable
             return;
 
         _susAnimator.TriggerHit();
-        health.Decrease(1);
+        //health.Decrease(1);
+        _voiceLineHandler.CreateVoiceLine();
 
         FinishHandler.Instance.OnSuspecHitted();
     }
