@@ -10,17 +10,17 @@ public class CameraShaker : MonoBehaviour
 
     public void Begin()
     {
-        if(_tween == null)
-        {
-            _tween = transform.DOLocalMoveY(_yOffset, _duration).SetLoops(-1, LoopType.Yoyo);
-        }
+        if (_tween != null)
+            _tween.Kill();
+
+        _tween = transform.DOLocalMoveY(_yOffset, _duration).SetLoops(-1, LoopType.Yoyo);
     }
 
     public void End()
     {
         if(_tween != null)
-        {
-            _tween = transform.DOLocalMoveY(0, _duration);
-        }
+            _tween.Kill();
+
+        _tween = transform.DOLocalMoveY(0, _duration);
     }
 }

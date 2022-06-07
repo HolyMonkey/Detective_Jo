@@ -37,11 +37,9 @@ public class Throwable : MonoBehaviour
         suspect.TakeDamage();
 
         _isUsed = true;
-
-        StartCoroutine(DelayerDisapear());
     }
 
-    private IEnumerator DelayerDisapear()
+    private IEnumerator DelayedDisapear()
     {
         yield return new WaitForSeconds(1f);
 

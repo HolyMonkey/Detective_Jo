@@ -4,25 +4,15 @@ using UnityEngine;
 
 public class RaycastHandler : MonoBehaviour
 {
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if(TryGetRayCastHit(out RaycastHit raycastHit))
-                TryPickUp(raycastHit);
-        }
-    }
-
-    public bool IsPickableHit()
+    public bool TryPickUp()
     {
         if (TryGetRayCastHit(out RaycastHit raycastHit))
         {
             if (TryPickUp(raycastHit))
-            {
                 return true;
-            }
         }
-            return false;
+
+        return false;
     }
 
     private bool TryPickUp(RaycastHit raycastHit)

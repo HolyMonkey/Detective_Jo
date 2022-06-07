@@ -39,8 +39,6 @@ public class PlayerMover : MonoBehaviour
 
     public void StopMoving()
     {
-        _canMove = false;
-
         StartCoroutine(Counting());
     }
 
@@ -55,7 +53,9 @@ public class PlayerMover : MonoBehaviour
 
     private IEnumerator Counting()
     {
-        yield return new WaitForSeconds(0.1f);
+        _canMove = false;
+
+        yield return new WaitForSeconds(0.2f);
 
         _canMove = true;
     }

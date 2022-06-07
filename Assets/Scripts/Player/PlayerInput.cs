@@ -19,21 +19,18 @@ public class PlayerInput : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0) && _raycastHandler.IsPickableHit())
+        if (Input.GetMouseButtonDown(0))
         {
-            _payerMover.StopMoving();
+            _shaker.Begin();
+
+            if (_raycastHandler.TryPickUp())
+                _payerMover.StopMoving();
         }
-        else
-        {
-            if (Input.GetMouseButton(0))
-            {
-                _payerMover.Move();
-                _shaker.Begin();
-            }
-            else
-            {
-                _shaker.End();
-            }
-        }
+
+        if(Input.GetMouseButton(0))
+            _payerMover.Move();
+
+        if(Input.GetMouseButtonUp(0))
+            _shaker.End();
     }
 }
