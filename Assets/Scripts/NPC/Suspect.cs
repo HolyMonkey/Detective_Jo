@@ -29,7 +29,7 @@ public class Suspect : MonoBehaviour, IDamagable
             return;
 
         _susAnimator.TriggerHit();
-        //health.Decrease(1);
+        health.Decrease(1);
         _voiceLineHandler.CreateVoiceLine();
 
         FinishHandler.Instance.OnSuspecHitted();
