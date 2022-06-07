@@ -15,10 +15,15 @@ public class PlayerInput : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetMouseButton(0))
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Input.GetMouseButton(0) && Physics.Raycast(ray, out RaycastHit hit))
         {
-            _payerMover.Move();
-            _shaker.Begin();
+            if (!hit.collider.gameObject.GetComponent<Pickable>())
+            {
+                _payerMover.Move();
+                _shaker.Begin();
+            }
         }
         else
         {

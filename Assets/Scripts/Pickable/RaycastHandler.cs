@@ -13,7 +13,7 @@ public class RaycastHandler : MonoBehaviour
         }
     }
 
-    private bool TryPickUp(RaycastHit raycastHit)
+    public bool TryPickUp(RaycastHit raycastHit)
     {
         if (raycastHit.collider.TryGetComponent(out Pickable pickable))
             pickable.PickUp();
