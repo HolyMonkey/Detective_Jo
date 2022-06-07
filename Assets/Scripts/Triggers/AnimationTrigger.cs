@@ -8,7 +8,7 @@ public class AnimationTrigger : TriggerBehaviour
 
     private const string Start = "Start";
 
-    public override void OnTriggerActivation()
+    public override void OnTriggerActivation(Player player)
     {
         _animator.SetTrigger(Start);
     }

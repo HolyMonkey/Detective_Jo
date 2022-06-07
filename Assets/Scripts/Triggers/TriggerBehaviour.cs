@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class TriggerBehaviour : MonoBehaviour, ITriggerBehaviour
 {
-    public abstract void OnTriggerActivation();
+    public abstract void OnTriggerActivation(Player player);
 }

@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class Pickable : MonoBehaviour
 {
+    [SerializeField] private Throwable _throwable;
     [SerializeField] private float _travelTime;
     [SerializeField] private bool _isFlyingToPlayer;
     [SerializeField] private ParabolaFlyAnimator _parabolaFlyAnimator;
 
     public bool IsPickedUp { get; private set; }
+    public Throwable throwable => _throwable;
 
     private PickUpAnimation _pickUpAnimation = new PickUpAnimation(new StraightFlyAnimation());
 
@@ -39,6 +41,8 @@ public class Pickable : MonoBehaviour
     private void OnAnimationEnd()
     {
         PickedUp?.Invoke();
+        FindObjectOfType<Player>().pickableHolder.AddClue(this);
+
         Disable();
     }
 

@@ -4,5 +4,5 @@ using UnityEngine;
 
 interface ITriggerBehaviour
 {
-    public void OnTriggerActivation();
+    public void OnTriggerActivation(Player player);
 }
