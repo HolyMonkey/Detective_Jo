@@ -13,10 +13,9 @@ public class Suspect : MonoBehaviour, IDamagable
     private Health _health;
 
     public Health health => _health;
-    public bool isDead => _deathHandler.isDead;
+    public bool IsGuilty => _deathHandler.isDead;
     public Transform headPoint => _headPoint;
     public SusAnimator susAnimator => _susAnimator;
-
 
     private void Awake()
     {
@@ -32,6 +31,6 @@ public class Suspect : MonoBehaviour, IDamagable
         health.Decrease(1);
         _voiceLineHandler.CreateVoiceLine();
 
-        FinishHandler.Instance.OnSuspecHitted();
+        FinishHandler.Instance.OnProofShown();
     }
 }

@@ -24,9 +24,9 @@ public class FinishHandler : MonoBehaviour
         _player = player;
     }
 
-    public void OnSuspecHitted()
+    public void OnProofShown()
     {
-        if (_suspect.isDead)
+        if (_suspect.IsGuilty)
         {
             _guiltyPanel.SetActive(true);
 
