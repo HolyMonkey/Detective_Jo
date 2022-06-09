@@ -17,6 +17,11 @@ public class Pickable : MonoBehaviour
 
     public event Action PickedUp;
 
+    public void Here()
+    {
+        Debug.Log(name);
+    }
+
     public void PickUp()
     {
         if (IsPickedUp == true)

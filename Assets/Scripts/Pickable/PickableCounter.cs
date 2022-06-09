@@ -16,6 +16,11 @@ public class PickableCounter : MonoBehaviour
     private void Awake()
     {
         _pickables = FindObjectsOfType<Pickable>();
+
+        foreach (var pickable in _pickables)
+        {
+            pickable.Here();
+        }
     }
 
     private void OnEnable()
