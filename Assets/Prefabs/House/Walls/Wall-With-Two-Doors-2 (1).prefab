@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8946971942375226333}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 38b6df174e4fbe849b922d8d22d6e5cd, type: 2}
+  - {fileID: 2100000, guid: da75980061bf9aa4cb8d2e0a7da2f13e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 8946971942625011683}
   - component: {fileID: 8946971942625011685}
   - component: {fileID: 8946971942625011682}
+  - component: {fileID: 600362990014311739}
   m_Layer: 0
   m_Name: Door-R.001
   m_TagString: Untagged
@@ -131,7 +132,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8946971942625011680}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -164,6 +165,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &600362990014311739
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946971942625011680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.79749995, y: 1.8999999, z: 0.2540551}
+  m_Center: {x: -0.39874998, y: -0.15446846, z: -0.09652893}
 --- !u!1 &8946971943687113423
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,6 +189,7 @@ GameObject:
   - component: {fileID: 8946971943687113422}
   - component: {fileID: 8946971943687113408}
   - component: {fileID: 8946971943687113409}
+  - component: {fileID: 2865077454087959748}
   m_Layer: 0
   m_Name: Door-L.001
   m_TagString: Untagged
@@ -212,7 +227,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8946971943687113423}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -245,3 +260,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2865077454087959748
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946971943687113423}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.79749995, y: 1.8999999, z: 0.2540551}
+  m_Center: {x: 0.39874998, y: -0.15446846, z: -0.09652895}

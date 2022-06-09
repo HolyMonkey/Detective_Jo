@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 324072844608088602}
   - component: {fileID: 3733639243666826687}
   - component: {fileID: 1455923087926677877}
+  - component: {fileID: 8169970250124797502}
   m_Layer: 0
   m_Name: Cradle
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095648105422352544}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 19.5, y: 0, z: 34}
   m_LocalScale: {x: 3, y: 3, z: 4}
   m_Children: []
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8169970250124797502
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095648105422352544}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2857879, y: 1.0214467, z: 0.7442586}
+  m_Center: {x: -0.012145164, y: 0.51072335, z: 0.020798987}
