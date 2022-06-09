@@ -16,7 +16,6 @@ public class SuspectVoicLines
     public string GetRandomVoiceLine()
     {
         var index = Random.Range(0, _notGuiltyVoiceLines.Count);
-        Debug.Log(_notGuiltyVoiceLines.Count);
 
         return _notGuiltyVoiceLines[index];
     }
