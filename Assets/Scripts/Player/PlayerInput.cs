@@ -15,8 +15,9 @@ public class PlayerInput : MonoBehaviour
         _raycastHandler = GetComponentInChildren<RaycastHandler>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
             _shaker.Begin();
@@ -25,10 +26,18 @@ public class PlayerInput : MonoBehaviour
                 _payerMover.StopMoving();
         }
 
+
+        if (Input.GetMouseButtonUp(0))
+            _shaker.End();
+    }
+
+    private void FixedUpdate()
+    {
+
+
         if(Input.GetMouseButton(0))
             _payerMover.Move();
 
-        if(Input.GetMouseButtonUp(0))
-            _shaker.End();
+
     }
 }

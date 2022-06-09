@@ -32,6 +32,7 @@ public class PickableThrower : MonoBehaviour
     {
         if (_pickableHolder.TryGetClue(out Pickable pickable))
         {
+            pickable.IsPickedUp = true;
             var throwable = Instantiate(pickable.throwable, _firePoint.position, Quaternion.identity);
             throwable.Throw(_suspect.headPoint.position);
         }

@@ -55,7 +55,7 @@ public class PlayerMover : MonoBehaviour
     {
         _canMove = false;
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.6f);
 
         _canMove = true;
     }

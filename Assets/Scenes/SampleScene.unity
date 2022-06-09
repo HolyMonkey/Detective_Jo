@@ -1235,11 +1235,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7616129540717678954, guid: d57fbc1fde1bd244490325ef0959a2e5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 12.06922
+      value: 9.430888
       objectReference: {fileID: 0}
     - target: {fileID: 7616129540717678954, guid: d57fbc1fde1bd244490325ef0959a2e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.2002
+      value: 12.5619
       objectReference: {fileID: 0}
     - target: {fileID: 7616129540717678954, guid: d57fbc1fde1bd244490325ef0959a2e5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1885,7 +1885,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66.65
+  m_fontSize: 48.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13212,7 +13212,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 288266
+  instanceID: 542532
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1
@@ -15581,6 +15581,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.019594993
       objectReference: {fileID: 0}
+    - target: {fileID: 5942451246015355642, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6662215815947963841, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00006084614
@@ -15671,6 +15675,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7638734852775798760, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
       propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986122601228810236, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8625845084694753406, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
@@ -17894,14 +17902,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 470825655158050436, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534259163728123864, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: _minY
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4534259163728123865, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -17949,34 +17949,6 @@ PrefabInstance:
     - target: {fileID: 4534259163728123866, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534259165334433362, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9063079
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534259165334433362, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.42261827
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534259165334433362, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534259165334433363, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: _yOffset
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534259165334433365, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.56436455
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534259165334433365, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.665015
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534259165334433365, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.7830189
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}

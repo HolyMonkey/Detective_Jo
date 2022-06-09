@@ -10,17 +10,12 @@ public class Pickable : MonoBehaviour
     [SerializeField] private bool _isFlyingToPlayer;
     [SerializeField] private ParabolaFlyAnimator _parabolaFlyAnimator;
 
-    public bool IsPickedUp { get; private set; }
+    public bool IsPickedUp { get; set; }
     public Throwable throwable => _throwable;
 
     private PickUpAnimation _pickUpAnimation = new PickUpAnimation(new StraightFlyAnimation());
 
     public event Action PickedUp;
-
-    public void Here()
-    {
-        Debug.Log(name);
-    }
 
     public void PickUp()
     {
@@ -30,7 +25,7 @@ public class Pickable : MonoBehaviour
         IsPickedUp = true;
 
         if (_isFlyingToPlayer)
-            StartCoroutine(_pickUpAnimation.Animating(transform, Camera.main.transform.position-Vector3.up*1.5f, _travelTime, new Action (OnAnimationEnd)));
+            StartCoroutine(_pickUpAnimation.Animating(transform, Camera.main.transform.position-Vector3.up*3f, _travelTime, new Action (OnAnimationEnd)));
 
         _parabolaFlyAnimator.Init(GetMethod(_isFlyingToPlayer));
     }
@@ -46,7 +41,9 @@ public class Pickable : MonoBehaviour
     private void OnAnimationEnd()
     {
         PickedUp?.Invoke();
-        FindObjectOfType<Player>().pickableHolder.AddClue(this);
+        var player = FindObjectOfType<Player>();
+
+        player.pickableHolder.AddClue(this);
 
         Disable();
     }
