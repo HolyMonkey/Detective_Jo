@@ -1,7 +1,5 @@
 using UnityEngine;
 using DG.Tweening;
-using System.Collections;
-using System;
 
 public class CameraMover : MonoBehaviour
 {
@@ -9,15 +7,8 @@ public class CameraMover : MonoBehaviour
 
     public void Transit(Transform moveToPoint, Transform lookAtPoint)
     {
-        StartCoroutine(Moving(moveToPoint, lookAtPoint));
-    }
-
-    private IEnumerator Moving(Transform moveToPoint, Transform lookAtPoint)
-    {
-        transform.DOMove(moveToPoint.position, _duration);
-
-        yield return new WaitForSeconds(_duration);
-
-        transform.DOLookAt(lookAtPoint.position, _duration);
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(transform.DOMove(moveToPoint.position, _duration));
+        sequence.Append(transform.DOLookAt(lookAtPoint.position, _duration));
     }
 }

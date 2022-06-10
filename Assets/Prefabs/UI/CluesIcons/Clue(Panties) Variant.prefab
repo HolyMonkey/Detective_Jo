@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3933330384150702601, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_Name
-      value: Clue(Panties)
+      value: Clue(Panties) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3933330384150702602, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_Pivot.x
@@ -41,11 +41,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3933330384150702602, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 260.8504
+      value: 243.3976
       objectReference: {fileID: 0}
     - target: {fileID: 3933330384150702602, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 352.5494
+      value: 353.5494
       objectReference: {fileID: 0}
     - target: {fileID: 3933330384150702602, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -81,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3933330384150702602, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 369
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3933330384150702602, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

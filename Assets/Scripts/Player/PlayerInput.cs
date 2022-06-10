@@ -17,7 +17,6 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-
         if (Input.GetMouseButtonDown(0))
         {
             _shaker.Begin();
@@ -33,11 +32,7 @@ public class PlayerInput : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-
         if(Input.GetMouseButton(0))
             _payerMover.Move();
-
-
     }
 }
