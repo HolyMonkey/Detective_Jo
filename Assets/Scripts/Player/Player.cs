@@ -4,7 +4,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private PickableThrower _pickableThrower;
     [SerializeField] private PlayerInput _playerInput;
-    [SerializeField] private CameraShaker _cameraShaker;
+    [SerializeField] private CameraHandler _cameraHandler;
     [SerializeField] private CameraMover _cameraMover;
     [SerializeField] private PickUpZone _pickUpZone;
     [SerializeField] private Loupe _loupe;
@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 
     public Loupe loupe => _loupe;
     public CameraMover cameraMover => _cameraMover;
-    public CameraShaker cameraShaker => _cameraShaker;
+    public CameraHandler cameraHandler => _cameraHandler;
     public PickableHolder pickableHolder => _pickableHolder;
     public PickableThrower pickableThrower => _pickableThrower;
     public PlayerInput playerInput => _playerInput;

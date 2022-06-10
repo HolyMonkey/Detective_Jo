@@ -6,10 +6,10 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotationSpeedX;
     [SerializeField] private float _rotationSpeedY;
-    [SerializeField] private float _minY;
-    [SerializeField] private float _maxY;
+    [SerializeField] private float _minX;
+    [SerializeField] private float _maxX;
 
-    private float _yRotation;
+    private float _cameraPitch;
     private Vector3 _targetPosition;
     private Camera _camera;
     private Rigidbody _rigidBody;
@@ -20,7 +20,7 @@ public class PlayerMover : MonoBehaviour
 
     private void Start()
     {
-        _yRotation = 45f;
+        _cameraPitch = 45f;
         _camera = GetComponentInChildren<Camera>();
         _rigidBody = GetComponent<Rigidbody>();
         _canMove = true;
@@ -44,11 +44,13 @@ public class PlayerMover : MonoBehaviour
 
     private void Rotate()
     {
-        _yRotation += Input.GetAxis(MouseY) * _rotationSpeedY * -1;
-        _yRotation = Mathf.Clamp(_yRotation, _minY, _maxY);
+        Vector2 mouseDelta = new Vector2(Input.GetAxis(MouseX), Input.GetAxis(MouseY));
 
-        transform.Rotate(0, Input.GetAxis(MouseX) * _rotationSpeedX, 0);
-        _camera.transform.localRotation = Quaternion.Euler(_yRotation, 0, 0);
+        _cameraPitch -= mouseDelta.y * _rotationSpeedX;
+        _cameraPitch = Mathf.Clamp(_cameraPitch, _maxX, _minX);
+        _camera.transform.localEulerAngles = Vector3.right * _cameraPitch;
+
+        transform.Rotate(Vector3.up * mouseDelta.x * _rotationSpeedY);
     }
 
     private IEnumerator Counting(float timePeriod)

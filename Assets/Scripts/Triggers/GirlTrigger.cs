@@ -18,7 +18,7 @@ public class GirlTrigger : TriggerBehaviour
 
         StartCoroutine(Delay(player.loupe, 1f));
         player.loupe.Disable();
-        player.cameraShaker.LookAt(_lookAtPoint, Excuse);
+        player.cameraHandler.LookAt(_lookAtPoint, Excuse);
         player.playerMover.StopMoving(1f);
 
         _isTriggered = true;

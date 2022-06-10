@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     private PlayerMover _payerMover;
-    private CameraShaker _shaker;
+    private CameraHandler _handler;
     private RaycastHandler _raycastHandler;
 
     private void Start()
     {
         _payerMover = GetComponent<PlayerMover>();
-        _shaker = GetComponentInChildren<CameraShaker>();
+        _handler = GetComponentInChildren<CameraHandler>();
         _raycastHandler = GetComponentInChildren<RaycastHandler>();
     }
 
@@ -19,7 +19,7 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _shaker.Begin();
+            _handler.BeginShake();
 
             if (_raycastHandler.TryPickUp())
                 _payerMover.StopMoving(0.6f);
@@ -27,7 +27,7 @@ public class PlayerInput : MonoBehaviour
 
 
         if (Input.GetMouseButtonUp(0))
-            _shaker.End();
+            _handler.EndShake();
     }
 
     private void FixedUpdate()
