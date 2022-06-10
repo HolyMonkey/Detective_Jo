@@ -37,9 +37,9 @@ public class PlayerMover : MonoBehaviour
         }
     }
 
-    public void StopMoving()
+    public void StopMoving(float timePeriod)
     {
-        StartCoroutine(Counting());
+        StartCoroutine(Counting(timePeriod));
     }
 
     private void Rotate()
@@ -51,11 +51,11 @@ public class PlayerMover : MonoBehaviour
         _camera.transform.localRotation = Quaternion.Euler(_yRotation, 0, 0);
     }
 
-    private IEnumerator Counting()
+    private IEnumerator Counting(float timePeriod)
     {
         _canMove = false;
 
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(timePeriod);
 
         _canMove = true;
     }

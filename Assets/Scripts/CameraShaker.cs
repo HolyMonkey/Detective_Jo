@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
@@ -37,6 +38,27 @@ public class CameraShaker : MonoBehaviour
             StopCoroutine(_coroutine);
 
         _coroutine = StartCoroutine(SittingDown());
+    }
+
+    public void LookAt(Transform lookAtPoint, Action onAniomationEnd = null)
+    {
+        if (_tween != null)
+            _tween.Kill();
+
+        transform.DOLookAt(lookAtPoint.position, _duration);
+
+        if (onAniomationEnd != null)
+            StartCoroutine(Delay(onAniomationEnd));
+    }
+
+    private IEnumerator Delay(Action onAniomationEnd)
+    {
+        yield return new WaitForSeconds(_duration);
+
+        onAniomationEnd();
+
+        if (_isWalking)
+            Begin();
     }
 
     private IEnumerator SittingDown()

@@ -23,7 +23,7 @@ public class PlayerInput : MonoBehaviour
             _shaker.Begin();
 
             if (_raycastHandler.TryPickUp())
-                _payerMover.StopMoving();
+                _payerMover.StopMoving(0.6f);
         }
 
 

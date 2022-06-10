@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 4746015627728448998}
-  _forceValue: 100
+  _forceValue: 60
   _boxCollider: {fileID: 1786550234498393623}
 --- !u!114 &4759688603234479103
 MonoBehaviour:
@@ -266,3 +266,4 @@ MonoBehaviour:
   _travelTime: 0.5
   _isFlyingToPlayer: 1
   _parabolaFlyAnimator: {fileID: 4787079514032135765}
+  _icon: {fileID: 0}

@@ -11,6 +11,7 @@ public class Suspect : MonoBehaviour, IDamagable
     [SerializeField] private VoiceLineHandler _voiceLineHandler;
 
     private Health _health;
+    private VoiceLines _voiceLines = new VoiceLines(new DefaultSuspectVoiceLines());
 
     public Health health => _health;
     public bool IsGuilty => _deathHandler.isDead;
@@ -29,7 +30,7 @@ public class Suspect : MonoBehaviour, IDamagable
 
         _susAnimator.TriggerHit();
         health.Decrease(1);
-        _voiceLineHandler.CreateVoiceLine();
+        _voiceLineHandler.CreateVoiceLine(_voiceLines);
 
         FinishHandler.Instance.OnProofShown();
     }

@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1330688886348837990, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
+      propertyPath: _forceValue
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4556054709956023265, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -134,7 +138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8657666709356735368, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: m_Name
-      value: Clue(Chocolate)
+      value: Clue(Chocolate) Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}

@@ -8,6 +8,6 @@ public class AlphMaskMover : MonoBehaviour
     private void Update()
     {
         transform.rotation = _camera.transform.rotation;
-        transform.position = _player.transform.position;
+        transform.position = _player.loupe.transform.position;
     }
 }

@@ -15,7 +15,7 @@ public class PickUpZone : MonoBehaviour
         {
             _pickable = pickable;
             _player.handAnimator.TriggerGrab();
-            _player.playerMover.StopMoving();
+            _player.playerMover.StopMoving(0.75f);
             _player.cameraShaker.SitDown();
         }
     }

@@ -14,7 +14,7 @@ public class FinishTrigger : TriggerBehaviour
         player.cameraShaker.End();
         player.cameraMover.Transit(_moveToPoint, _lookAtPoint);
         player.playerInput.enabled = false;
-        player.loupe.Disable();
+        player.loupe.Disable(false);
         player.pickUpZone.Disable();
         _finishActivity.Prepare(player, _suspect);
 
