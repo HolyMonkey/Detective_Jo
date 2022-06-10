@@ -12,7 +12,7 @@ public class FinishTrigger : TriggerBehaviour
     public override void OnTriggerActivation(Player player)
     {
         player.cameraShaker.End();
-        player.cameraMover.Move(_moveToPoint, _lookAtPoint);
+        player.cameraMover.Transit(_moveToPoint, _lookAtPoint);
         player.playerInput.enabled = false;
         player.loupe.Disable();
         player.pickUpZone.Disable();

@@ -9,9 +9,11 @@ public class Pickable : MonoBehaviour
     [SerializeField] private float _travelTime;
     [SerializeField] private bool _isFlyingToPlayer;
     [SerializeField] private ParabolaFlyAnimator _parabolaFlyAnimator;
+    [SerializeField] private Icon _icon;
 
     public bool IsPickedUp { get; set; }
     public Throwable throwable => _throwable;
+    public Icon icon => _icon;
 
     private PickUpAnimation _pickUpAnimation = new PickUpAnimation(new StraightFlyAnimation());
 
@@ -19,6 +21,8 @@ public class Pickable : MonoBehaviour
 
     public void PickUp()
     {
+        _icon.ChangeColor();
+
         if (IsPickedUp == true)
             return;
 
@@ -28,6 +32,11 @@ public class Pickable : MonoBehaviour
             StartCoroutine(_pickUpAnimation.Animating(transform, Camera.main.transform.position-Vector3.up*3f, _travelTime, new Action (OnAnimationEnd)));
 
         _parabolaFlyAnimator.Init(GetMethod(_isFlyingToPlayer));
+    }
+
+    public void ChangeIcon(Icon icon)
+    {
+        _icon = icon;
     }
 
     private Action GetMethod(bool isFlyingToPlayer)

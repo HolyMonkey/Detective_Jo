@@ -5,10 +5,9 @@ using TMPro;
 
 public class PickableCounter : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _counterView;
-
     private int _counter;
     private Pickable[] _pickables;
+    private SpawnPositions _positions;
 
     public int pickableCount => _pickables.Length;
     public int playerPickable => _counter;
@@ -16,6 +15,7 @@ public class PickableCounter : MonoBehaviour
     private void Awake()
     {
         _pickables = FindObjectsOfType<Pickable>();
+        _positions = FindObjectOfType<SpawnPositions>();
     }
 
     private void OnEnable()
@@ -26,6 +26,8 @@ public class PickableCounter : MonoBehaviour
         }
 
         OnPickedUp();
+
+        ShowIcons(_pickables);
     }
 
     private void OnDisable()
@@ -47,7 +49,17 @@ public class PickableCounter : MonoBehaviour
         }
 
         _counter = counter;
+    }
 
-        _counterView.text = $"{counter}/{_pickables.Length}";
+    private void ShowIcons(Pickable[] pickables)
+    {
+        int positionNumber = 0;
+
+        foreach (var pickable in pickables)
+        {
+            Icon icon = Instantiate(pickable.icon, _positions.points[0 + positionNumber].transform);
+            pickable.ChangeIcon(icon);
+            positionNumber++;
+        }
     }
 }

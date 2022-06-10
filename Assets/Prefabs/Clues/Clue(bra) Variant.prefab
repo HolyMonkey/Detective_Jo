@@ -126,12 +126,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7922719406378722255, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
+      propertyPath: _icon
+      value: 
+      objectReference: {fileID: 2085989233397722250, guid: 171dbf080a3957d43a26739b2a42340e, type: 3}
+    - target: {fileID: 7922719406378722255, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: _parabolaFlyAnimator
       value: 
       objectReference: {fileID: 7064695914192572343}
     - target: {fileID: 8657666709356735368, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: m_Name
-      value: Clue(bra)
+      value: Clue(Bra)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}

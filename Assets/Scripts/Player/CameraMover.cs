@@ -6,7 +6,7 @@ public class CameraMover : MonoBehaviour
 {
     [SerializeField] private float _duration;
 
-    public void Move(Transform moveToPoint, Transform lookAtPoint)
+    public void Transit(Transform moveToPoint, Transform lookAtPoint)
     {
         StartCoroutine(Moving(moveToPoint, lookAtPoint));
     }
