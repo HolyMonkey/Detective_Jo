@@ -41,7 +41,7 @@ public class CameraHandler : MonoBehaviour
         _coroutine = StartCoroutine(SittingDown());
     }
 
-    public void LookAt(Transform lookAtPoint, Action onAniomationEnd = null)
+    public void LookAt(Transform lookAtPoint, float lookDuration, Action onAniomationEnd = null)
     {
         if (_tween != null)
             _tween.Kill();
@@ -50,7 +50,7 @@ public class CameraHandler : MonoBehaviour
 
         Sequence sequence = DOTween.Sequence();
         sequence.Append(transform.DOLookAt(lookAtPoint.position, _duration));
-        sequence.AppendInterval(_duration);
+        sequence.AppendInterval(lookDuration);
         sequence.Append(transform.DOLookAt(targetPointTransform.position, _duration));
 
         if (onAniomationEnd != null)

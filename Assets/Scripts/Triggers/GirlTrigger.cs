@@ -6,6 +6,7 @@ public class GirlTrigger : TriggerBehaviour
 {
     [SerializeField] private Transform _lookAtPoint;
     [SerializeField] private VoiceLineHandler _voiceLineHandler;
+    [SerializeField] private float _lookDuration;
 
     private bool _isTriggered;
 
@@ -16,10 +17,10 @@ public class GirlTrigger : TriggerBehaviour
         if (_isTriggered)
             return;
 
-        StartCoroutine(Delay(player.loupe, 1f));
+        StartCoroutine(Delay(player.loupe, _lookDuration));
         player.loupe.Disable();
-        player.cameraHandler.LookAt(_lookAtPoint, Excuse);
-        player.playerMover.StopMoving(1f);
+        player.cameraHandler.LookAt(_lookAtPoint, _lookDuration, Excuse);
+        player.playerMover.StopMoving(_lookDuration);
 
         _isTriggered = true;
     }

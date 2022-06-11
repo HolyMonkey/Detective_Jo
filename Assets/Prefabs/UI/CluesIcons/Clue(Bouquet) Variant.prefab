@@ -77,7 +77,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3933330384150702602, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 9.2
       objectReference: {fileID: 0}
     - target: {fileID: 3933330384150702602, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -95,25 +95,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3933330384150702604, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3933330385952369922, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_Name
       value: Bouquet
       objectReference: {fileID: 0}
     - target: {fileID: 3933330385952369923, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 124.4854
+      value: 226.063
       objectReference: {fileID: 0}
     - target: {fileID: 3933330385952369923, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 124.4854
-      objectReference: {fileID: 0}
-    - target: {fileID: 3933330385952369923, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3933330385952369923, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 224.281
       objectReference: {fileID: 0}
     - target: {fileID: 3933330385952369924, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_Sprite

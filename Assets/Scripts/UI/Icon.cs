@@ -12,6 +12,11 @@ public class Icon : MonoBehaviour
         _clueImage.DOColor(new Color(0, 0, 0), 0);
     }
 
+    public void SetSprite(Sprite sprite)
+    {
+        _clueImage.sprite = sprite;
+    }
+
     public void ChangeColor()
     {
         _clueImage.DOColor(new Color(1, 1, 1), _colorChangeDuration);
