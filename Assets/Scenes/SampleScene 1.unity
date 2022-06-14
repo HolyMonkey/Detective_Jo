@@ -308,7 +308,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &140719986
 Mesh:
@@ -4216,7 +4216,7 @@ Transform:
   - {fileID: 1045825864}
   - {fileID: 981217423}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &577558745
 PrefabInstance:
@@ -4849,7 +4849,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 48.947, y: -45.536, z: -11.84}
 --- !u!4 &712855257 stripped
 Transform:
@@ -7331,7 +7331,7 @@ Transform:
   - {fileID: 997630587}
   - {fileID: 1936985802}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &990847053
 PrefabInstance:
@@ -10136,7 +10136,7 @@ Transform:
   - {fileID: 1464171498}
   - {fileID: 2795527853602188041}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1472206609
 PrefabInstance:
@@ -11729,7 +11729,7 @@ Transform:
   - {fileID: 512506307}
   - {fileID: 472032052}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1760549830
 Mesh:
@@ -12938,7 +12938,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 53764
+  instanceID: 227138
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1
@@ -15127,6 +15127,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 582323540799201525, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
+      propertyPath: _lookDuration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2262350288140728942, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -16869,7 +16873,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4534259163728123865, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4534259163728123865, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
       propertyPath: m_LocalPosition.x

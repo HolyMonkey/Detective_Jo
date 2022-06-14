@@ -14,6 +14,7 @@ public class PlayerMover : MonoBehaviour
     private Camera _camera;
     private Rigidbody _rigidBody;
     private bool _canMove;
+    private bool _canControllCamera = true;
 
     private const string MouseX = "Mouse X";
     private const string MouseY = "Mouse Y";
@@ -33,13 +34,15 @@ public class PlayerMover : MonoBehaviour
             _targetPosition = transform.position + (transform.forward * _moveSpeed * Time.deltaTime);
             _rigidBody.MovePosition(_targetPosition);
 
-            Rotate();
         }
+
+        if(_canControllCamera)
+            Rotate();
     }
 
-    public void StopMoving(float timePeriod)
+    public void StopMoving(float timePeriod, bool canControlCamera = false)
     {
-        StartCoroutine(Counting(timePeriod));
+        StartCoroutine(Counting(timePeriod, canControlCamera));
     }
 
     private void Rotate()
@@ -53,12 +56,14 @@ public class PlayerMover : MonoBehaviour
         transform.Rotate(Vector3.up * mouseDelta.x * _rotationSpeedY);
     }
 
-    private IEnumerator Counting(float timePeriod)
+    private IEnumerator Counting(float timePeriod, bool canControlCamera)
     {
         _canMove = false;
+        _canControllCamera = canControlCamera;
 
         yield return new WaitForSeconds(timePeriod);
 
         _canMove = true;
+        _canControllCamera = true;
     }
 }

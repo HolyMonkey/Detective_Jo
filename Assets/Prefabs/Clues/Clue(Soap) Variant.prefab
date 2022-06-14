@@ -141,15 +141,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4556054709956023265, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.87
+      value: -3.3899994
       objectReference: {fileID: 0}
     - target: {fileID: 4556054709956023265, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4556054709956023265, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.72
+      value: 9.470001
       objectReference: {fileID: 0}
     - target: {fileID: 4556054709956023265, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -180,12 +180,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7922719406378722255, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
+      propertyPath: _icon
+      value: 
+      objectReference: {fileID: 1449031156156106121, guid: 484a58cfd5ceabf40a80558d194547aa, type: 3}
+    - target: {fileID: 7922719406378722255, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: _parabolaFlyAnimator
       value: 
       objectReference: {fileID: 5443465394440318094}
     - target: {fileID: 8657666709356735368, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: m_Name
-      value: Clue(Soap) Variant
+      value: Clue(Soap) Variant (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
