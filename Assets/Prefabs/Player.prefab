@@ -89,7 +89,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 991748341948109886}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!20 &1372462685
 Camera:
@@ -105,9 +105,9 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
-  m_SensorSize: {x: 21.95, y: 9.35}
+  m_SensorSize: {x: 21, y: 15.2}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 69.5
+  m_FocalLength: 63.28
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1316,6 +1316,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4534259165334433362}
     m_Modifications:
+    - target: {fileID: 825376208, guid: 7ecb1a719dbb1a041aa243fe8b565c05, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1587269361585886347, guid: 7ecb1a719dbb1a041aa243fe8b565c05, type: 3}
       propertyPath: m_Name
       value: Loupe
@@ -1371,6 +1375,14 @@ PrefabInstance:
     - target: {fileID: 4302495812945446838, guid: 7ecb1a719dbb1a041aa243fe8b565c05, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283973241297786992, guid: 7ecb1a719dbb1a041aa243fe8b565c05, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283973241297786992, guid: 7ecb1a719dbb1a041aa243fe8b565c05, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6668744441203224324, guid: 7ecb1a719dbb1a041aa243fe8b565c05, type: 3}
