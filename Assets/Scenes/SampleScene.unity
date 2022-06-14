@@ -2271,7 +2271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 582323540799201525, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
       propertyPath: _lookDuration
-      value: 1.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2262350288140728942, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
       propertyPath: m_RootOrder

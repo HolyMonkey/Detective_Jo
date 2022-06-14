@@ -5,11 +5,12 @@ using UnityEngine.UI;
 public class Icon : MonoBehaviour
 {
     [SerializeField] private Image _clueImage;
+    [SerializeField] private Color _startColor;
     [SerializeField] private float _colorChangeDuration;
 
     private void Start()
     {
-        _clueImage.DOColor(new Color(0, 0, 0), 0);
+        _clueImage.DOColor(_startColor, 0);
     }
 
     public void SetSprite(Sprite sprite)

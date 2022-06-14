@@ -20,7 +20,7 @@ public class PlayerMover : MonoBehaviour
 
     private void Start()
     {
-        _cameraPitch = 45f;
+        _cameraPitch = 25f;
         _camera = GetComponentInChildren<Camera>();
         _rigidBody = GetComponent<Rigidbody>();
         _canMove = true;

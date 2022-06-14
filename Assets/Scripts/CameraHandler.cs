@@ -7,6 +7,8 @@ public class CameraHandler : MonoBehaviour
 {
     [SerializeField] private float _yOffset;
     [SerializeField] private float _duration;
+    [SerializeField] private float _sitDownDuration;
+    [SerializeField] private float _standUpDuration;
     [SerializeField] private Transform _targetPoint;
 
     private Tweener _tween;
@@ -72,16 +74,16 @@ public class CameraHandler : MonoBehaviour
         if (_tween != null)
             _tween.Kill();
 
-        _tween = transform.DOLocalMoveY(-1f, _duration);
+        _tween = transform.DOLocalMoveY(-2.5f, _sitDownDuration);
 
         yield return new WaitForSeconds(_duration);
 
         if (_tween != null)
             _tween.Kill();
 
-        _tween = transform.DOLocalMoveY(0, _duration/2);
+        _tween = transform.DOLocalMoveY(0, _standUpDuration);
 
-        yield return new WaitForSeconds(_duration/2);
+        yield return new WaitForSeconds(_duration / 2);
 
         if (_isWalking)
             BeginShake();
