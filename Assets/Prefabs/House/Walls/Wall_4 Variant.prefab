@@ -13,11 +13,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4721461261724705393, guid: 81f8f7ccc23d2b34495db5f10950966d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8.277832
+      value: 18.399801
       objectReference: {fileID: 0}
     - target: {fileID: 4721461261724705393, guid: 81f8f7ccc23d2b34495db5f10950966d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.5
+      value: 3.8034499
       objectReference: {fileID: 0}
     - target: {fileID: 4721461261724705393, guid: 81f8f7ccc23d2b34495db5f10950966d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5390193766578403531, guid: 81f8f7ccc23d2b34495db5f10950966d, type: 3}
       propertyPath: m_Name
-      value: Wall_4
+      value: Wall_4 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81f8f7ccc23d2b34495db5f10950966d, type: 3}
