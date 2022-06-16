@@ -5,7 +5,10 @@ using UnityEngine;
 public class FinishHandler : MonoBehaviour
 {
     [SerializeField] private GameObject _guiltyPanel;
+    [SerializeField] private GameObject _winScreen;
     [SerializeField] private GameObject _notEnougProofsPanel;
+    [SerializeField] private GameObject _cluesPanel;
+    [SerializeField] private GameObject _tapyTapyPanel;
     [SerializeField] private LevelsHandler _levelsHandler;
 
     private Suspect _suspect;
@@ -21,6 +24,8 @@ public class FinishHandler : MonoBehaviour
     public void OnFinishActivated(Player player, Suspect suspect)
     {
         StartCoroutine(DelayedCheck(player.pickableHolder.count));
+        _cluesPanel.SetActive(false);
+        StartCoroutine(DelayingTapyTapy());
         _suspect = suspect;
         _player = player;
     }
@@ -35,16 +40,27 @@ public class FinishHandler : MonoBehaviour
     {
         if (_suspect.IsGuilty)
         {
-            _guiltyPanel.SetActive(true);
+            ShowGuiltyPanel();
 
             return;
         }
 
         if(_player.pickableHolder.count<= 0)
-        {
-            _notEnougProofsPanel.SetActive(true);
-            _levelsHandler.OnLevelFailed();
-        }
+            ShowNotEnoughProofs();
+    }
+
+    private void ShowGuiltyPanel()
+    {
+        _guiltyPanel.SetActive(true);
+        _tapyTapyPanel.SetActive(false);
+        StartCoroutine(DelayingWinScreen());
+    }
+
+    private void ShowNotEnoughProofs()
+    {
+        _notEnougProofsPanel.SetActive(true);
+        _levelsHandler.OnLevelFailed();
+        _tapyTapyPanel.SetActive(false);
     }
 
     private IEnumerator DelayedCheck(int pickedUpClues)
@@ -53,9 +69,23 @@ public class FinishHandler : MonoBehaviour
 
         if (pickedUpClues <= 0)
         {
-            _notEnougProofsPanel.SetActive(true);
-            _levelsHandler.OnLevelFailed();
+            ShowNotEnoughProofs();
         }
+    }
+
+    private IEnumerator DelayingWinScreen()
+    {
+        yield return new WaitForSeconds(1.7f);
+
+        
+        _winScreen.SetActive(true);
+    }
+
+    private IEnumerator DelayingTapyTapy()
+    {
+        yield return new WaitForSeconds(1f);
+
+        _tapyTapyPanel.SetActive(true);
     }
 
     private IEnumerator DelayedResolution(bool isGuilty)
@@ -63,8 +93,8 @@ public class FinishHandler : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         if (isGuilty)
-            _guiltyPanel.SetActive(true);
+            ShowGuiltyPanel();
         else
-            _notEnougProofsPanel.SetActive(true);
+            ShowNotEnoughProofs();
     }
 }
