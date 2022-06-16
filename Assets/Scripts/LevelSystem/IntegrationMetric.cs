@@ -1,4 +1,4 @@
-using System.Collections;
+using GameAnalyticsSDK;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -20,77 +20,86 @@ public class IntegrationMetric
         Dictionary<string, object> count = new Dictionary<string, object>();
         count.Add("count", CountSession());
 
-        //AppMetrica.Instance.ReportEvent("game_start", count);
+        AppMetrica.Instance.ReportEvent("game_start", count);
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "game_start", count);
     }
 
     public void OnLevelStart(int levelIndex)
     {
         var levelProperty = CreateLevelProperty(levelIndex);
 
-        //AppMetrica.Instance.ReportEvent("level_start", levelProperty);
+        AppMetrica.Instance.ReportEvent("level_start", levelProperty);
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "level_start", levelProperty);
     }
 
     public void OnLevelComplete(int levelComplitioTime, int levelIndex)
     {
         Dictionary<string, object> userInfo = new Dictionary<string, object> { { "level", levelIndex }, { "time_spent", levelComplitioTime }};
 
-        //AppMetrica.Instance.ReportEvent("level_complete", userInfo);
+        AppMetrica.Instance.ReportEvent("level_complete", userInfo);
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "level_complete", userInfo);
     }
 
-    public void OnLevelFail(int levelFailTime, int levelIndex, string lostCouse)
+    public void OnLevelFail(int levelFailTime, int levelIndex)
     {
-        Dictionary<string, object> userInfo = new Dictionary<string, object> { { "level", levelIndex }, { "time_spent", levelFailTime }, { "reason", lostCouse } };
+        Dictionary<string, object> userInfo = new Dictionary<string, object> { { "level", levelIndex }, { "time_spent", levelFailTime }};
 
-        //AppMetrica.Instance.ReportEvent("fail", userInfo);
+        AppMetrica.Instance.ReportEvent("fail", userInfo);
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, "fail", userInfo);
     }
 
     public void OnRestartLevel(int levelIndex)
     {
         var levelProperty = CreateLevelProperty(levelIndex);
 
-        //AppMetrica.Instance.ReportEvent("restart", levelProperty);
+        AppMetrica.Instance.ReportEvent("restart", levelProperty);
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "restart", levelProperty);
+
     }
 
     public void OnSoftCurrencySpend(string type, string name, int currencySpend)
     {
         Dictionary<string, object> userInfo = new Dictionary<string, object> { { "type", type }, { "name", name }, {"amount", currencySpend } };
 
-        //AppMetrica.Instance.ReportEvent("soft_spent", userInfo);
+        AppMetrica.Instance.ReportEvent("soft_spent", userInfo);
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "soft_spent", userInfo);
+
     }
 
     public void OnAbiltyUsed(string name)
     {
         Dictionary<string, object> userInfo = new Dictionary<string, object> { { "name", name } };
 
-        //AppMetrica.Instance.ReportEvent("ability_used", userInfo);
+        AppMetrica.Instance.ReportEvent("ability_used", userInfo);
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "ability_used", userInfo);
     }
 
     public void SetUserProperty()
     {
 
-        //YandexAppMetricaUserProfile userProfile = new YandexAppMetricaUserProfile();
-        //userProfile.Apply(YandexAppMetricaAttribute.CustomCounter("session_count").WithDelta(SessionCount));
-        //ReportUserProfile(userProfile);
+        YandexAppMetricaUserProfile userProfile = new YandexAppMetricaUserProfile();
+        userProfile.Apply(YandexAppMetricaAttribute.CustomCounter("session_count").WithDelta(SessionCount));
+        ReportUserProfile(userProfile);
 
         if (PlayerPrefs.HasKey(_regDay) == false)
         {
-            //RegDay(amplitude);
+            RegDay();
         }
         else
         {
             int firstDay = PlayerPrefs.GetInt(_regDay);
             int daysInGame = DateTime.Now.Day - firstDay;
 
-            //DaysInGame(amplitude, daysInGame);
+            DaysInGame(daysInGame);
         }
     }
 
     private void RegDay()
     {
 
-        //YandexAppMetricaUserProfile userProfile = new YandexAppMetricaUserProfile();
-        //userProfile.Apply(YandexAppMetricaAttribute.CustomString("reg_day").WithValue(DateTime.Now.ToString()));
-        //ReportUserProfile(userProfile);
+        YandexAppMetricaUserProfile userProfile = new YandexAppMetricaUserProfile();
+        userProfile.Apply(YandexAppMetricaAttribute.CustomString("reg_day").WithValue(DateTime.Now.ToString()));
+        ReportUserProfile(userProfile);
 
         PlayerPrefs.SetInt(_regDay, DateTime.Now.Day);
     }
@@ -98,16 +107,16 @@ public class IntegrationMetric
     private void DaysInGame(int daysInGame)
     {
 
-        //YandexAppMetricaUserProfile userProfile = new YandexAppMetricaUserProfile();
-        //userProfile.Apply(YandexAppMetricaAttribute.CustomCounter("days_in_game").WithDelta(daysInGame));
-        //ReportUserProfile(userProfile);
+        YandexAppMetricaUserProfile userProfile = new YandexAppMetricaUserProfile();
+        userProfile.Apply(YandexAppMetricaAttribute.CustomCounter("days_in_game").WithDelta(daysInGame));
+        ReportUserProfile(userProfile);
     }
 
-    //private void ReportUserProfile(YandexAppMetricaUserProfile userProfile)
-    //{
-    //    AppMetrica.Instance.SetUserProfileID(GetProfileId());
-    //    AppMetrica.Instance.ReportUserProfile(userProfile);
-    //}
+    private void ReportUserProfile(YandexAppMetricaUserProfile userProfile)
+    {
+        AppMetrica.Instance.SetUserProfileID(GetProfileId());
+        AppMetrica.Instance.ReportUserProfile(userProfile);
+    }
 
     private string GetProfileId()
     {

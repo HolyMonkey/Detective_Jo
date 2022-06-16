@@ -68,9 +68,9 @@ public class LevelsHandler : MonoBehaviour
         SaveSystem.SaveLevelsProgression(Counter);
     }
 
-    private void OnLevelFailed(string lostCouse)
+    public void OnLevelFailed()
     {
-        _integrationMetric.OnLevelFail(GetTime(), Counter, lostCouse);
+        _integrationMetric.OnLevelFail(GetTime(), Counter);
     }
 
     private int GetTime()

@@ -30682,6 +30682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _guiltyPanel: {fileID: 1601763721}
   _notEnougProofsPanel: {fileID: 1036524133}
+  _levelsHandler: {fileID: 1705372002}
 --- !u!114 &1615747966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36080,7 +36081,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 592768
+  instanceID: 707864
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1

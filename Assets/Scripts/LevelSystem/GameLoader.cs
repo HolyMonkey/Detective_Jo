@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameAnalyticsSDK;
 using System;
 
 public class GameLoader : MonoBehaviour
@@ -9,12 +10,9 @@ public class GameLoader : MonoBehaviour
 
     private IntegrationMetric _integrationMetric = new IntegrationMetric();
 
-    private void Awake()
-    {
-    }
-
     private void Start()
     {
+        GameAnalytics.Initialize();
         _integrationMetric.OnGameStart();
         _levelsHandler.LoadNextLevel();
         _integrationMetric.SetUserProperty();

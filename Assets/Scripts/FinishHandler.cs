@@ -6,6 +6,7 @@ public class FinishHandler : MonoBehaviour
 {
     [SerializeField] private GameObject _guiltyPanel;
     [SerializeField] private GameObject _notEnougProofsPanel;
+    [SerializeField] private LevelsHandler _levelsHandler;
 
     private Suspect _suspect;
     private Player _player;
@@ -40,7 +41,10 @@ public class FinishHandler : MonoBehaviour
         }
 
         if(_player.pickableHolder.count<= 0)
+        {
             _notEnougProofsPanel.SetActive(true);
+            _levelsHandler.OnLevelFailed();
+        }
     }
 
     private IEnumerator DelayedCheck(int pickedUpClues)
@@ -48,7 +52,10 @@ public class FinishHandler : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         if (pickedUpClues <= 0)
+        {
             _notEnougProofsPanel.SetActive(true);
+            _levelsHandler.OnLevelFailed();
+        }
     }
 
     private IEnumerator DelayedResolution(bool isGuilty)
