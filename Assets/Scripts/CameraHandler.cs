@@ -13,10 +13,21 @@ public class CameraHandler : MonoBehaviour
 
     private Tweener _tween;
     private bool _isWalking;
+    private bool _isDisabled;
     private Coroutine _coroutine;
+
+    public void Disable()
+    {
+        _isDisabled = true;
+        if (_tween != null)
+            _tween.Kill();
+    }
 
     public void BeginShake()
     {
+        if (_isDisabled)
+            return;
+
         if (_tween != null)
             _tween.Kill();
 
@@ -27,6 +38,9 @@ public class CameraHandler : MonoBehaviour
 
     public void EndShake()
     {
+        if (_isDisabled)
+            return;
+
         if (_tween != null)
             _tween.Kill();
 

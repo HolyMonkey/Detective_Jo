@@ -10,6 +10,7 @@ public class HuggyTrigger : TriggerBehaviour
     public override void OnTriggerActivation(Player player)
     {
         player.playerMover.StopMoving(99, true);
+        player.cameraHandler.Disable();
         _finishActivity.Prepare(player, _suspect);
     }
 }

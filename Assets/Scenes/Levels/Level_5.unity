@@ -9908,6 +9908,17 @@ Transform:
   m_Father: {fileID: 1045825864}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &482973497 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2221274996072938368, guid: 05b11255bdf018744b0f96f07c5cb203, type: 3}
+  m_PrefabInstance: {fileID: 9182520466172006739}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d718c0ce52403d48b927617b0364cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &483667973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30395,6 +30406,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296956263}
   m_Mesh: {fileID: 5958362384829529401, guid: c127c954e59483e4484b5245da4f2b12, type: 3}
+--- !u!1 &1298777811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7144157153586920641, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
+  m_PrefabInstance: {fileID: 2115574492}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1298777813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298777811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7766d419007870540a9eb326c8634a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1304038356
 GameObject:
   m_ObjectHideFlags: 0
@@ -42337,6 +42365,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fad88645494777a478fd87b21f69d21d, type: 3}
+--- !u!114 &1861427907 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1637432781, guid: 1fa919a2669fa5e4eac0f65344a66b10, type: 3}
+  m_PrefabInstance: {fileID: 108361077233194724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d718c0ce52403d48b927617b0364cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1861908941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43030,7 +43069,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 1473604
+  instanceID: 55368
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1
@@ -49218,6 +49257,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.00000000397363
       objectReference: {fileID: 0}
+    - target: {fileID: 7144157153586920644, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
+      propertyPath: _finishActivity
+      value: 
+      objectReference: {fileID: 1298777813}
     - target: {fileID: 7144157153586920645, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.0999985
@@ -49242,7 +49285,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 115.352
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 647537369, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
+    - {fileID: 7258394795723455332, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
 --- !u!4 &2120698883 stripped
 Transform:
@@ -49993,6 +50038,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7814834428315694978, guid: 1fa919a2669fa5e4eac0f65344a66b10, type: 3}
+      propertyPath: _parabolaFlyAnimator
+      value: 
+      objectReference: {fileID: 1861427907}
     - target: {fileID: 8765922231556325317, guid: 1fa919a2669fa5e4eac0f65344a66b10, type: 3}
       propertyPath: m_Name
       value: Clue(TennisBall)
@@ -54570,6 +54619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clue(DogCollar)
       objectReference: {fileID: 0}
+    - target: {fileID: 4231034716211923097, guid: 05b11255bdf018744b0f96f07c5cb203, type: 3}
+      propertyPath: _parabolaFlyAnimator
+      value: 
+      objectReference: {fileID: 482973497}
     - target: {fileID: 7529696849692260535, guid: 05b11255bdf018744b0f96f07c5cb203, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -24,6 +24,12 @@ public class FinishHandler : MonoBehaviour
         _player = player;
     }
 
+    public void ShowEvidence(PickableHolder pickableHolder, PickableCounter pickableCounter)
+    {
+        bool isGuilty = pickableHolder.count >= pickableCounter.pickableCount;
+        StartCoroutine(DelayedResolution(isGuilty));
+    }
+
     public void OnProofShown()
     {
         if (_suspect.IsGuilty)
@@ -42,6 +48,16 @@ public class FinishHandler : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         if (pickedUpClues <= 0)
+            _notEnougProofsPanel.SetActive(true);
+    }
+
+    private IEnumerator DelayedResolution(bool isGuilty)
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (isGuilty)
+            _guiltyPanel.SetActive(true);
+        else
             _notEnougProofsPanel.SetActive(true);
     }
 }
