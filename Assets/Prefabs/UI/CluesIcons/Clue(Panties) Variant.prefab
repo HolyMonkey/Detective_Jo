@@ -99,6 +99,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panties
       objectReference: {fileID: 0}
+    - target: {fileID: 3933330385952369923, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933330385952369923, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 166.1124
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933330385952369923, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 165.8943
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933330385952369923, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933330385952369923, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3933330385952369924, guid: baf5ab6768b57fb4086375a7d56cd3d5, type: 3}
       propertyPath: m_Sprite
       value: 

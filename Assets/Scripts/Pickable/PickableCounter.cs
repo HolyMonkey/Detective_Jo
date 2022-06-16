@@ -57,7 +57,7 @@ public class PickableCounter : MonoBehaviour
 
         foreach (var pickable in pickables)
         {
-            Icon icon = Instantiate(pickable.icon, _positions.points[0 + positionNumber].transform);
+            Icon icon = Instantiate(pickable.icon, _positions.points[positionNumber].transform);
             pickable.ChangeIcon(icon);
             positionNumber++;
         }

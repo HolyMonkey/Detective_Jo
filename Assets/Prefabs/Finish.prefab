@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _headPoint: {fileID: 1385394408733094126}
   _susAnimator: {fileID: 2106326387}
-  _maxHealth: 3
+  _maxHealth: 2
   _deathHandler: {fileID: 2106326386}
   _voiceLineHandler: {fileID: 4516813548601110867}
 --- !u!1 &7144157153422037208
