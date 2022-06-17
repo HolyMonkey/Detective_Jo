@@ -35226,7 +35226,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 486234
+  instanceID: 859058
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1
@@ -40632,6 +40632,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2106326388, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
+      propertyPath: _maxHealth
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7144157153422037208, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
       propertyPath: m_Name
       value: Finish

@@ -7472,6 +7472,34 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d24740d17c9f62e4b9a882892ce19c29, type: 2}
+    - target: {fileID: 543450651693425055, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 543450651693425055, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 543450651693425055, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9661172
+      objectReference: {fileID: 0}
+    - target: {fileID: 543450651693425055, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.013553567
+      objectReference: {fileID: 0}
+    - target: {fileID: 543450651693425055, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.2524756
+      objectReference: {fileID: 0}
+    - target: {fileID: 543450651693425055, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.051863834
+      objectReference: {fileID: 0}
+    - target: {fileID: 543450651693425055, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -29.291
+      objectReference: {fileID: 0}
     - target: {fileID: 582323540799201525, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
       propertyPath: _lookAtPoint2
       value: 
@@ -7479,6 +7507,14 @@ PrefabInstance:
     - target: {fileID: 582323540799201525, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
       propertyPath: _lookDuration
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 582323540799201526, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 582323540799201526, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.56
       objectReference: {fileID: 0}
     - target: {fileID: 582323540799201527, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
       propertyPath: m_Size.x
@@ -35817,7 +35853,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 410150
+  instanceID: 827988
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1
@@ -41171,6 +41207,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2106326388, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
+      propertyPath: _maxHealth
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7144157153422037208, guid: ba3a6a76d9fda344ebf8a2d361f095d1, type: 3}
       propertyPath: m_Name
       value: Finish
