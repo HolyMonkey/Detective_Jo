@@ -10,6 +10,7 @@ public class Pickable : MonoBehaviour
     [SerializeField] private bool _isFlyingToPlayer;
     [SerializeField] private ParabolaFlyAnimator _parabolaFlyAnimator;
     [SerializeField] private Icon _icon;
+    [SerializeField] private GameObject _loupeIcon;
 
     public bool IsPickedUp { get; set; }
     public Throwable throwable => _throwable;
@@ -18,6 +19,12 @@ public class Pickable : MonoBehaviour
     private PickUpAnimation _pickUpAnimation = new PickUpAnimation(new StraightFlyAnimation());
 
     public event Action PickedUp;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.TryGetComponent(out PickUpZone _))
+            _loupeIcon.gameObject.SetActive(false);
+    }
 
     public void PickUp()
     {

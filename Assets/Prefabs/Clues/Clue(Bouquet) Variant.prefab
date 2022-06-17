@@ -163,6 +163,10 @@ PrefabInstance:
       propertyPath: _forceValue
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 4145911324521145031, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4556054709956023265, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -206,6 +210,18 @@ PrefabInstance:
     - target: {fileID: 4556054709956023265, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 78.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048661265220908628, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.9088455
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048661265220908628, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.121205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048661265220908628, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.06167271
       objectReference: {fileID: 0}
     - target: {fileID: 7922719406378722255, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: _icon
