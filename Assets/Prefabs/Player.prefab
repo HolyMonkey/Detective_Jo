@@ -1397,6 +1397,18 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 825376208, guid: 7ecb1a719dbb1a041aa243fe8b565c05, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.017
+      objectReference: {fileID: 0}
+    - target: {fileID: 825376208, guid: 7ecb1a719dbb1a041aa243fe8b565c05, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.129
+      objectReference: {fileID: 0}
+    - target: {fileID: 825376208, guid: 7ecb1a719dbb1a041aa243fe8b565c05, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.351
+      objectReference: {fileID: 0}
     - target: {fileID: 1587269361585886347, guid: 7ecb1a719dbb1a041aa243fe8b565c05, type: 3}
       propertyPath: m_Name
       value: Loupe

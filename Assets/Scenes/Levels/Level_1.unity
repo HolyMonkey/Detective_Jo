@@ -12597,7 +12597,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 238548
+  instanceID: 77740
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1
