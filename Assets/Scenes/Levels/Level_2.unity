@@ -16886,6 +16886,7 @@ GameObject:
   - component: {fileID: 861898420}
   - component: {fileID: 861898422}
   - component: {fileID: 861898421}
+  - component: {fileID: 861898423}
   m_Layer: 0
   m_Name: Wall-With-Door-1 (1)
   m_TagString: Untagged
@@ -16957,6 +16958,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861898419}
   m_Mesh: {fileID: 4195379170018832565, guid: 07fa35a2d5d2da74585d65dffa60f1db, type: 3}
+--- !u!65 &861898423
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861898419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0000005, y: 2.0000002, z: 0.20000014}
+  m_Center: {x: 0, y: 1, z: 0.09999955}
 --- !u!1001 &879343970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30342,6 +30356,7 @@ GameObject:
   - component: {fileID: 1598477302}
   - component: {fileID: 1598477304}
   - component: {fileID: 1598477303}
+  - component: {fileID: 1598477305}
   m_Layer: 0
   m_Name: Door-Single
   m_TagString: Untagged
@@ -30412,6 +30427,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598477301}
   m_Mesh: {fileID: 1727376601700120605, guid: 07fa35a2d5d2da74585d65dffa60f1db, type: 3}
+--- !u!65 &1598477305
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598477301}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9999998, y: 1.9000002, z: 0.13378297}
+  m_Center: {x: -0.49478576, y: -0.15446825, z: -0.036084834}
 --- !u!1 &1598529616
 GameObject:
   m_ObjectHideFlags: 0
@@ -35789,7 +35817,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 183266
+  instanceID: 410150
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1
@@ -43885,7 +43913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4534259163728123865, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -7.6
       objectReference: {fileID: 0}
     - target: {fileID: 4534259163728123865, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
       propertyPath: m_LocalRotation.w
