@@ -23,7 +23,10 @@ public class Pickable : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.TryGetComponent(out PickUpZone _))
-            _loupeIcon.gameObject.SetActive(false);
+        {
+            if(_loupeIcon != null)
+                _loupeIcon.gameObject.SetActive(false);
+        }
     }
 
     public void PickUp()
