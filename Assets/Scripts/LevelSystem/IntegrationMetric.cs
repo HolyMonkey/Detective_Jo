@@ -27,6 +27,7 @@ public class IntegrationMetric
     public void OnLevelStart(int levelIndex)
     {
         var levelProperty = CreateLevelProperty(levelIndex);
+        Debug.Log(levelIndex);
 
         AppMetrica.Instance.ReportEvent("level_start", levelProperty);
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "level_start", levelProperty);

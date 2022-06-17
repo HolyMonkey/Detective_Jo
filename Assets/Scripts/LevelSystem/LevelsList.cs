@@ -17,6 +17,8 @@ public class LevelsList : ScriptableObject
 
     public AssetReference GetScene(int index)
     {
+        index -= 1;
+
         _currentScene = _scenes[index];
 
         SaveCurrentIndex(index);
@@ -46,7 +48,7 @@ public class LevelsList : ScriptableObject
             do
             {
                 index = Random.Range(0, _scenes.Length);
-            } while (index == counter);
+            } while (index == (counter-1));
         }
 
         _currentScene = _scenes[index];
@@ -58,7 +60,7 @@ public class LevelsList : ScriptableObject
 
     private void SaveCurrentIndex(int index)
     {
-        PlayerPrefs.SetInt(CurrentLevelIndex, index);
+        PlayerPrefs.SetInt(CurrentLevelIndex, (index-1));
     }
 
     public static bool BossLevelFilter(int index)
