@@ -30,7 +30,7 @@ MonoBehaviour:
   secretKey:
   - cb3e83bb027872cf1ab9f5a9d0c59c769ceab1b1
   Build:
-  - 0.1
+  - 0.2
   SelectedPlatformOrganization:
   - Agava
   SelectedPlatformStudio:

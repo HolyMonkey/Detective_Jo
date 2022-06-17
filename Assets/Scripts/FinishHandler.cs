@@ -57,9 +57,9 @@ public class FinishHandler : MonoBehaviour
 
     private void ShowNotEnoughProofs()
     {
+        _tapyTapyPanel.SetActive(false);
         _notEnougProofsPanel.SetActive(true);
         _levelsHandler.OnLevelFailed();
-        _tapyTapyPanel.SetActive(false);
     }
 
     private IEnumerator DelayedCheck(int pickedUpClues)
