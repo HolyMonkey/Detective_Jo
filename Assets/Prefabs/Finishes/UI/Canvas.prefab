@@ -377,6 +377,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4209027490813744873, guid: 1297c8c3b2e6bbc4aa24e6ec81d3c7a9, type: 3}
+      propertyPath: m_text
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209027490813744873, guid: 1297c8c3b2e6bbc4aa24e6ec81d3c7a9, type: 3}
+      propertyPath: m_fontSize
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652412521692905150, guid: 1297c8c3b2e6bbc4aa24e6ec81d3c7a9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cb37917483ee24fea8fab306393441e5, type: 3}
     - target: {fileID: 6920846459899546657, guid: 1297c8c3b2e6bbc4aa24e6ec81d3c7a9, type: 3}
       propertyPath: m_Name
       value: Open
@@ -496,8 +508,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4209027490813744873, guid: 1297c8c3b2e6bbc4aa24e6ec81d3c7a9, type: 3}
       propertyPath: m_fontSize
-      value: 89.5
+      value: 71.45
       objectReference: {fileID: 0}
+    - target: {fileID: 4652412521692905150, guid: 1297c8c3b2e6bbc4aa24e6ec81d3c7a9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 681db73f19fb24efe843aad713eccb43, type: 3}
     - target: {fileID: 6920846459899546657, guid: 1297c8c3b2e6bbc4aa24e6ec81d3c7a9, type: 3}
       propertyPath: m_Name
       value: Close

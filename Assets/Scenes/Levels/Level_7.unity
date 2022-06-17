@@ -2331,13 +2331,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 582323540799201526, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 582323540799201526, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2262350288140728942, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2262350288140728942, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9
+      value: 8.98
       objectReference: {fileID: 0}
     - target: {fileID: 2262350288140728942, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2345,7 +2353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2262350288140728942, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.2
+      value: 27.12
       objectReference: {fileID: 0}
     - target: {fileID: 2262350288140728942, guid: b103bb49018022a4298c4548ab53fef7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12666,7 +12674,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 213480
+  instanceID: 364014
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1

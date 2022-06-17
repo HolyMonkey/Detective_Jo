@@ -53,7 +53,6 @@ public class FinishHandler : MonoBehaviour
     {
         _guiltyPanel.SetActive(true);
         _tapyTapyPanel.SetActive(false);
-        StartCoroutine(DelayingWinScreen());
     }
 
     private void ShowNotEnoughProofs()
