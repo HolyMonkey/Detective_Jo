@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Shoes
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
-  m_ShaderKeywords: DR_RIM_ON _CELPRIMARYMODE_NONE _TEXTUREBLENDINGMODE_MULTIPLY
+  m_ShaderKeywords: DR_RIM_ON _CELPRIMARYMODE_SINGLE _TEXTUREBLENDINGMODE_MULTIPLY
     _UNITYSHADOWMODE_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -70,13 +70,13 @@ Material:
     - _BumpScale: 1
     - _CelExtraEnabled: 0
     - _CelNumSteps: 3
-    - _CelPrimaryMode: 0
+    - _CelPrimaryMode: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FlatRimEdgeSmoothness: 0.75
-    - _FlatRimLightAlign: 0.34
+    - _FlatRimEdgeSmoothness: 0.502
+    - _FlatRimLightAlign: 0.171
     - _FlatRimSize: 0.46
     - _FlatSpecularEdgeSmoothness: 0.53
     - _FlatSpecularSize: 0.36
@@ -100,9 +100,9 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _RimEnabled: 1
-    - _SelfShadingSize: 0.08
+    - _SelfShadingSize: 0.669
     - _SelfShadingSizeExtra: 0.71
-    - _ShadowEdgeSize: 0.5
+    - _ShadowEdgeSize: 0.104
     - _ShadowEdgeSizeExtra: 0.311
     - _SmoothnessTextureChannel: 0
     - _SpecularEnabled: 0
@@ -118,14 +118,14 @@ Material:
     - _VertexColorsEnabled: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorDim: {r: 0.032, g: 0.03031579, b: 0.028631581, a: 1}
+    - _Color: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
+    - _ColorDim: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _ColorDimExtra: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FlatRimColor: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
+    - _FlatRimColor: {r: 0.4301988, g: 0.4301988, b: 0.4301988, a: 1}
     - _FlatSpecularColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _UnityShadowColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}

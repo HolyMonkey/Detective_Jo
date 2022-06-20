@@ -6,6 +6,7 @@ using UnityEngine;
 public class CameraHandler : MonoBehaviour
 {
     [SerializeField] private float _yOffset;
+    [SerializeField] private float _downOffset;
     [SerializeField] private float _duration;
     [SerializeField] private float _sitDownDuration;
     [SerializeField] private float _standUpDuration;
@@ -88,16 +89,16 @@ public class CameraHandler : MonoBehaviour
         if (_tween != null)
             _tween.Kill();
 
-        _tween = transform.DOLocalMoveY(-2.5f, _sitDownDuration);
+        _tween = transform.DOLocalMoveY(_downOffset, _sitDownDuration);
 
-        yield return new WaitForSeconds(_duration);
+        yield return new WaitForSeconds(_sitDownDuration);
 
         if (_tween != null)
             _tween.Kill();
 
         _tween = transform.DOLocalMoveY(0, _standUpDuration);
 
-        yield return new WaitForSeconds(_duration / 2);
+        yield return new WaitForSeconds(_standUpDuration / 2);
 
         if (_isWalking)
             BeginShake();
