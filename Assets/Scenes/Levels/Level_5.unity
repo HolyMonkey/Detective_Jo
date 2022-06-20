@@ -2113,6 +2113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2349239089048978478, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3434449806138380890, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2122,6 +2126,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4571441621783378448, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839906560460236467, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -42019,7 +42027,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 34012
+  instanceID: 57724
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1

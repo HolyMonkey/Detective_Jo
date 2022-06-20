@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4503318, g: 0.49805784, b: 0.56295806, a: 1}
+  m_IndirectSpecularColor: {r: 0.45033175, g: 0.49805784, b: 0.5629581, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -35857,7 +35857,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 288960
+  instanceID: 67658
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1
