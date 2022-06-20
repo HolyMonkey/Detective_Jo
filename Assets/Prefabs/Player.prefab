@@ -498,6 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _yOffset: -0.5
+  _downOffset: -2
   _duration: 0.5
   _sitDownDuration: 1
   _standUpDuration: 1

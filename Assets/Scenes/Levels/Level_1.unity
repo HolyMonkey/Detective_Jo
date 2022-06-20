@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45033175, g: 0.49805784, b: 0.5629581, a: 1}
+  m_IndirectSpecularColor: {r: 0.4503318, g: 0.49805784, b: 0.56295806, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12876,7 +12876,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 34328
+  instanceID: 229958
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1
@@ -17157,26 +17157,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 277772494, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: _yOffset
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 277772494, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: _duration
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 277772494, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: _downOffset
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 277772494, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: _sitDownDuration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 277772494, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: _standUpDuration
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4534259163728123865, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
       propertyPath: m_RootOrder
       value: 5
