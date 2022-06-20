@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45033175, g: 0.49805784, b: 0.5629581, a: 1}
+  m_IndirectSpecularColor: {r: 0.4503318, g: 0.49805784, b: 0.56295806, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12876,7 +12876,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 34328
+  instanceID: 293596
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1
@@ -16369,14 +16369,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1792073224645807186, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 76.00002
-      objectReference: {fileID: 0}
-    - target: {fileID: 1792073224645807186, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 249.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2349239088391693862, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -16464,50 +16456,6 @@ PrefabInstance:
     - target: {fileID: 2349239088391694043, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2349239089048978478, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2349239089086796305, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645388554046012815, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_text
-      value: 'Tap '
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645388554046012815, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_fontSize
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645388554046012815, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_fontSizeMax
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 4571441621783378449, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 371
-      objectReference: {fileID: 0}
-    - target: {fileID: 4571441621783378463, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_fontSize
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 4571441621783378463, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_fontSizeMax
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 6279459168047323440, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6543774925159652649, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 76
-      objectReference: {fileID: 0}
-    - target: {fileID: 6543774925159652649, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 162
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
@@ -17157,26 +17105,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 277772494, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: _yOffset
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 277772494, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: _duration
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 277772494, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: _downOffset
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 277772494, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: _sitDownDuration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 277772494, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
-      propertyPath: _standUpDuration
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4534259163728123865, guid: fcbebbce6b869f447ba31604aa05302c, type: 3}
       propertyPath: m_RootOrder
       value: 5

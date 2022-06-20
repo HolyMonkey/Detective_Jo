@@ -20,6 +20,7 @@ public class CameraHandler : MonoBehaviour
     public void Disable()
     {
         _isDisabled = true;
+
         if (_tween != null)
             _tween.Kill();
     }
@@ -98,9 +99,11 @@ public class CameraHandler : MonoBehaviour
 
         _tween = transform.DOLocalMoveY(0, _standUpDuration);
 
-        yield return new WaitForSeconds(_standUpDuration / 2);
+        yield return new WaitForSeconds(_standUpDuration);
 
         if (_isWalking)
+        {
             BeginShake();
+        }
     }
 }
