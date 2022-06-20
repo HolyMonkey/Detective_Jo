@@ -12876,7 +12876,7 @@ MonoBehaviour:
   mainTexTiling: {x: 1, y: 1}
   mainTexOffset: {x: 0, y: 0}
   createdMatsStorage: []
-  instanceID: 229958
+  instanceID: 64756
   editorMesh: {fileID: 340889084}
   maskVersion: 1
   maskeeVersion: 1
@@ -16464,6 +16464,10 @@ PrefabInstance:
     - target: {fileID: 2349239088391694043, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349239089048978477, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2349239089048978478, guid: 1c1bf83c3e76a0c4181febc83b535f39, type: 3}
       propertyPath: m_IsActive
