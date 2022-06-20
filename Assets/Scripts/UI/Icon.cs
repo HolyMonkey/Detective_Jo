@@ -7,6 +7,7 @@ public class Icon : MonoBehaviour
     [SerializeField] private Image _clueImage;
     [SerializeField] private Color _startColor;
     [SerializeField] private float _colorChangeDuration;
+    [SerializeField] private GameObject _particles;
 
     private void Start()
     {
@@ -21,5 +22,6 @@ public class Icon : MonoBehaviour
     public void ChangeColor()
     {
         _clueImage.DOColor(new Color(1, 1, 1), _colorChangeDuration);
+        _particles.SetActive(true);
     }
 }
