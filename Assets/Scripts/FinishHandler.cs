@@ -13,6 +13,7 @@ public class FinishHandler : MonoBehaviour
 
     private Suspect _suspect;
     private Player _player;
+    private bool _haveEvidence;
 
     public static FinishHandler Instance { get; private set; }
 
@@ -24,6 +25,8 @@ public class FinishHandler : MonoBehaviour
     public void OnFinishActivated(Player player, Suspect suspect)
     {
         StartCoroutine(DelayedCheck(player.pickableHolder.count));
+        _haveEvidence = player.pickableHolder.count > 0;
+
         _cluesPanel.SetActive(false);
         StartCoroutine(DelayingTapyTapy());
         _suspect = suspect;
@@ -57,9 +60,9 @@ public class FinishHandler : MonoBehaviour
 
     private void ShowNotEnoughProofs()
     {
+        _tapyTapyPanel.SetActive(false);
         _notEnougProofsPanel.SetActive(true);
         _levelsHandler.OnLevelFailed();
-        _tapyTapyPanel.SetActive(false);
     }
 
     private IEnumerator DelayedCheck(int pickedUpClues)
@@ -84,7 +87,8 @@ public class FinishHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        _tapyTapyPanel.SetActive(true);
+        if (_haveEvidence)
+            _tapyTapyPanel.SetActive(true);
     }
 
     private IEnumerator DelayedResolution(bool isGuilty)

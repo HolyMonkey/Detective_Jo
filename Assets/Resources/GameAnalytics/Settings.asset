@@ -26,17 +26,17 @@ MonoBehaviour:
   UserMessagesFailed: 0
   CustomArea: 
   gameKey:
-  - 4097d24252e6081e48544ea05204ec7b
+  - 2495a77167284e564495fb8619a67f11
   secretKey:
-  - cb3e83bb027872cf1ab9f5a9d0c59c769ceab1b1
+  - 1e740c0135d525e110c5874a536c39bf4ee5971f
   Build:
-  - 0.1
+  - 0.2
   SelectedPlatformOrganization:
-  - Agava
+  - 
   SelectedPlatformStudio:
-  - Agava
+  - 
   SelectedPlatformGame:
-  - Detective Jo
+  - 
   SelectedPlatformGameID: f7240300
   SelectedOrganization: 01000000
   SelectedStudio: 01000000
@@ -63,7 +63,7 @@ MonoBehaviour:
   ResourceCurrencies: []
   LastCreatedGamePlatform: -1
   Platforms: 0b000000
-  CurrentInspectorState: 1
+  CurrentInspectorState: 0
   ClosedHints: 
   DisplayHints: 0
   DisplayHintsScrollState: {x: 0, y: 0}

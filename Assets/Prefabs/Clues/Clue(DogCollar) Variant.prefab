@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4145911324521145031, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4556054709956023265, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -187,9 +191,13 @@ PrefabInstance:
       propertyPath: _icon
       value: 
       objectReference: {fileID: 1449031156156106121, guid: 9a0600e901e606941a582e9af7c68abe, type: 3}
+    - target: {fileID: 7922719406378722255, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
+      propertyPath: _parabolaFlyAnimator
+      value: 
+      objectReference: {fileID: 2221274996072938368}
     - target: {fileID: 8657666709356735368, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}
       propertyPath: m_Name
-      value: Clue(DogCollar)
+      value: Clue(DogCollar) Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b0514de38139da47a9ada96c406cfd0, type: 3}

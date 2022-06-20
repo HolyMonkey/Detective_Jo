@@ -9,6 +9,8 @@ public class Health
     private DeathHandler _deathHandler;
     private int _curentValue;
 
+    public int MaxHealth => _maxValue;
+
     public Health(int maxValue, DeathHandler deathHandler)
     {
         _maxValue = maxValue;

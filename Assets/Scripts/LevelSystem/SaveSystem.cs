@@ -5,7 +5,7 @@ using UnityEngine;
 public static class SaveSystem
 {
     private const string _levelKey = "LevelKey";
-    private const int _firstLevel = 0;
+    private const int _firstLevel = 1;
 
     public static void SaveLevelsProgression(int index)
     {

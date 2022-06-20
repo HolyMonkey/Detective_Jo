@@ -44,7 +44,7 @@ public class LevelsHandler : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        if (Counter >= _levelList.SceneCount)
+        if (Counter > _levelList.SceneCount)
             _levelList.GetRandomScene(Counter).LoadSceneAsync();
         else
             _levelList.GetScene(Counter).LoadSceneAsync();
