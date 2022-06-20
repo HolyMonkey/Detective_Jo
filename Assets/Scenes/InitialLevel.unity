@@ -403,8 +403,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 993858068}
-  - component: {fileID: 993858067}
   - component: {fileID: 993858066}
+  - component: {fileID: 993858067}
   m_Layer: 0
   m_Name: GameLoader
   m_TagString: Untagged

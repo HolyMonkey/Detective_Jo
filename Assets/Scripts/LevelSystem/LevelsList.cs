@@ -9,16 +9,16 @@ public class LevelsList : ScriptableObject
     [SerializeField] private AssetReference[] _scenes;
 
     private const int BossLevelIndex = 5;
-
     private AssetReference _currentScene;
-    public int SceneCount => _scenes.Length-1;
+
+    public int SceneCount => _scenes.Length;
 
     private const string CurrentLevelIndex = "CurrentLevelIndex";
 
     public AssetReference GetScene(int index)
     {
         index -= 1;
-
+        Debug.Log(index);
         _currentScene = _scenes[index];
 
         SaveCurrentIndex(index);
@@ -28,13 +28,15 @@ public class LevelsList : ScriptableObject
 
     public AssetReference GetCurrentScene()
     {
-        if (_currentScene == null)
+        Debug.Log(PlayerPrefs.GetInt(CurrentLevelIndex));
+        if (PlayerPrefs.HasKey(CurrentLevelIndex))
         {
-            if (PlayerPrefs.HasKey(CurrentLevelIndex))
-                _currentScene = _scenes[PlayerPrefs.GetInt(CurrentLevelIndex)];
-            else
-                _currentScene = _scenes[0];
-        } 
+            _currentScene = _scenes[PlayerPrefs.GetInt(CurrentLevelIndex)];
+        }
+        else
+        {
+            _currentScene = _scenes[0];
+        }
 
         return _currentScene;
     }
@@ -43,12 +45,12 @@ public class LevelsList : ScriptableObject
     {
         int index = 0;
 
-        if (SceneCount > 1)
+        if (_scenes.Length > 1)
         {
             do
             {
                 index = Random.Range(0, _scenes.Length);
-            } while (index == (counter-1));
+            } while (index == counter);
         }
 
         _currentScene = _scenes[index];
@@ -60,7 +62,7 @@ public class LevelsList : ScriptableObject
 
     private void SaveCurrentIndex(int index)
     {
-        PlayerPrefs.SetInt(CurrentLevelIndex, (index-1));
+        PlayerPrefs.SetInt(CurrentLevelIndex, (index));
     }
 
     public static bool BossLevelFilter(int index)
